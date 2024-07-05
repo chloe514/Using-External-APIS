@@ -34,7 +34,7 @@ app.post('/weather', async (req, res) => {
             tempHiLo: `${response.data.main.temp_max.toFixed(1)} / ${response.data.main.temp_min.toFixed(1)}`,
             date: new Date().toLocaleDateString()
         };
-        res.send(weatherData);
+        res.json(weatherData);
     } catch (error) {
         console.error('Error fetching weather data:', error);
         res.status(500).send('Error fetching weather data');
@@ -45,6 +45,7 @@ app.post('/weather', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
 
 
 
