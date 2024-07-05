@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <!-- Form to submit zip code  -->
+    <form action="/weather" method="POST">
+        <label for="zip">Enter Zip Code:</label>
+        <input type="text" name="zip" id="zip" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <!--Weather information display-->
+    <div id="weatherInfo" style="display: none;">
+        <h2>Current Weather</h2>
+        <p><strong>City:</strong> <span id="cityDisplay"></span></p>
+        <p><strong>Temperature:</strong> <span id="temperature"></span> °F</p>
+        <p><strong>Conditions:</strong> <span id="conditions"></span></p>
+        <p><strong>Temp Hi/Lo:</strong> <span id="temp-hi-lo"></span> °F</p>
+        <p><strong>Date:</strong> <span id="date"></span></p>
+    </div>
+    <script src="https://cdn.jsdeliver.net/npm/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
